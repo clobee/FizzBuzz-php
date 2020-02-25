@@ -2,7 +2,8 @@
     "name": "php_exercices/fizz-buzz",
     "type": "project",
     "require": {
-        "php": "7.4"
+        "php": "7.4",
+        "phpstan/phpstan": "^0.12.11"
     },
     "autoload": {
         "psr-4": {
@@ -19,7 +20,8 @@
     },
     "scripts": {
         "test": [
-            "./vendor/phpunit/phpunit/phpunit"
+            "./vendor/phpunit/phpunit/phpunit",
+            "./vendor/phpstan/phpstan/phpstan analyse -l max src tests"
         ]
     }
 }
