@@ -10,6 +10,11 @@
             "php_exercices\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "php_exercices_tests\\": "tests/"
+        }
+    },
     "require-dev": {
         "phpunit/phpunit": "^9.0"
     },

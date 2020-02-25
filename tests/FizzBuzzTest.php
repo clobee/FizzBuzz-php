@@ -2,29 +2,30 @@
 
 declare(strict_types=1);
 
-use PHPUnit\Framework\TestCase;
+namespace php_exercices_tests;
 
-use function PHPUnit\Framework\assertEquals;
+use PHPUnit\Framework\TestCase;
+use php_exercices\FizzBuzz;
 
 final class FizzBuzzTest extends TestCase
 {
     /**
-     * @dataProvider provideArrayData()
+     * @dataProvider provide_array_data()
      */
     public function test_fizz_buzz_is_returned(
         int $key,
         string $value
-    ) {
-        $result = new php_exercices\FizzBuzz();
+    ) : void {
+        $result = new FizzBuzz();
 
-        assertEquals(
+        $this->assertEquals(
             $result->process($key),
             $value,
             "{$key} should return {$value}"
         );
     }
 
-    public function provideArrayData() : array
+    public function provide_array_data() : array
     {
         return [
             [ 0 , 'FizzBuzz'],
